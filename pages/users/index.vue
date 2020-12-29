@@ -38,6 +38,10 @@ export default {
         loadUser() {
             this.$router.push(`/users/${this.form.id}`)
         }
+    },
+
+    head: {
+        title: 'users'
     }
 }
 </script>
