@@ -51,11 +51,11 @@ export default {
 <script>
 import axios from 'axios'
 import Card from '@/components/Card'
+import {mapGetters} from 'vuex'
 
 export default {
     data() {
         return {
-            posts: [],
             show: true
         }
     },
@@ -64,9 +64,16 @@ export default {
         Card
     },
 
-    async asyncData() {
+    computed: {
+        ...mapGetters([
+            'posts'
+        ])
+    },
+
+    async fetch({store}) {
         let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
-        return {posts: data}
+        
+        store.dispatch('setPosts', data)
     },
 
     head: {
