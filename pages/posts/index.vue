@@ -21,6 +21,17 @@
 
             </b-col>
         </b-row>
+
+        <div class="d-flex justify-content-end">
+            <b-button
+                pill
+                variant="primary"
+                v-scroll-to="'body'"
+                style="width: 50px; height: 50px;"
+            >
+                <b-icon icon="arrow-up-circle-fill" variant="light"></b-icon>
+            </b-button>
+        </div>
     </div>
 </template>
 

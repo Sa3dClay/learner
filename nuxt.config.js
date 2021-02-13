@@ -17,8 +17,14 @@ export default {
     '@/assets/css/style.css'
   ],
 
+  transition: {
+    name: 'fade',
+    mode: 'out-in'
+  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '@/plugins/scrollto.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -32,6 +38,10 @@ export default {
   modules: [
     'bootstrap-vue/nuxt'
   ],
+
+  bootstrapVue: {
+    icons: true
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
